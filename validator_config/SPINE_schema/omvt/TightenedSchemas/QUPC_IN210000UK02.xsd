@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a non-standard "strict" version of an NPfIT schema, with optional elements made optional and II/CV types tightened. -->
+<!-- The schemas have also been tightened for NHSVocab Types.-->
+<!-- It is provided "without prejudice" with no guarantee of fitness for any purpose -->
+<!-- Produced by XSDStrictMaker v1.5, Definition file v1.2-->
+<!-- Change History
+2004-10-27			Joseph Waller					Combine into Interactions -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hl7="urn:hl7-org:v3" xmlns="urn:hl7-org:v3" xmlns:ns1="urn:npfit:psisqr" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+<xs:include schemaLocation="../VocabSchema/NHSVocab_3107.xsd"/>
+	
+   <xs:include schemaLocation="../dt/datatypes_3107.xsd"/>
+	
+   <xs:include schemaLocation="../voc/voc_3107.xsd"/>
+	<!-- Agent Person SDS Schema -->
+	
+   
+	<!-- Agent System SDS Schema -->
+	
+   
+	<!-- Application Acknowledgement -->
+	
+   <xs:include schemaLocation="MCCI_MT020101UK11_3107.xsd"/>
+	<!-- Control Act Wrapper Query - Acknowledgement Response -->
+	
+   <xs:include schemaLocation="QUQI_MT030101UK02_3107.xsd"/>
+	<!-- import the PSIS schema -->
+	
+   <xs:import namespace="urn:npfit:psisqr" schemaLocation="queryResponseEvent_3107.xsd"/>
+	<!-- PSIS CRE Data Retrieval -->
+	
+   <xs:element name="QUPC_IN210000UK02" type="QUPC_IN210000UK01.Message"/>
+	<!-- XSDStrictMaker : ComplexType specifically ignored -->
+   <xs:complexType name="QUPC_IN210000UK01.Message">
+		
+      <xs:sequence>
+			
+         <xs:element name="id" type="II"/>
+			
+         <xs:element name="creationTime" type="TS"/>
+			
+         <xs:element name="versionCode" type="CS"/>
+			
+         <xs:element name="interactionId" type="II"/>
+			
+         <xs:element name="processingCode" type="CS"/>
+			
+         <xs:element name="processingModeCode" type="CS"/>
+			
+         <xs:element name="acceptAckCode" type="CS"/>
+			
+         <xs:element name="acknowledgement" type="MCCI_MT020101UK11.Acknowledgement"/>
+			
+         <xs:element name="communicationFunctionRcv" type="MCCI_MT020101UK11.CommunicationFunctionRcv"/>
+			
+         <xs:element name="communicationFunctionSnd" type="MCCI_MT020101UK11.CommunicationFunctionSnd"/>
+			
+         <xs:element name="ControlActEvent" type="QUPC_IN210000UK01.ControlActEvent"/>
+		
+      </xs:sequence>
+		
+      <xs:attribute name="type" type="Classes" default="Message"/>
+		
+      <xs:attribute name="typeID" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="oid"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="realmCode" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="cs"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="nullFlavor" type="cs" use="optional"/>
+	
+   </xs:complexType>
+	
+   <xs:complexType name="QUPC_IN210000UK01.ControlActEvent">
+		
+      <xs:sequence>
+			
+         <xs:element name="author" type="QUQI_MT030101UK02.Author" minOccurs="0"/>
+			
+         <xs:element name="author1" type="QUQI_MT030101UK02.Author2" maxOccurs="2"/>
+			
+         <xs:element name="reason" type="QUQI_MT030101UK02.Reason" minOccurs="0"/>
+			
+         <xs:element name="subject" type="QUPC_IN210000UK01.Subject"/>
+			
+         <xs:element name="queryAck" type="QUQI_MT030101UK02.QueryAck"/>
+		
+      </xs:sequence>
+		
+      <xs:attribute name="type" type="Classes" default="ControlAct"/>
+		
+      <xs:attribute name="classCode" type="ActClass" use="optional"/>
+		
+      <xs:attribute name="moodCode" type="ActMood" use="optional"/>
+		
+      <xs:attribute name="typeID" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="oid"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="realmCode" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="cs"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="nullFlavor" type="cs" use="optional"/>
+	
+   </xs:complexType>
+	
+   <xs:complexType name="QUPC_IN210000UK01.Subject">
+		
+      <xs:sequence>
+			
+         <xs:element ref="ns1:queryResponseEvent"/>
+		
+      </xs:sequence>
+		
+      <xs:attribute name="type" type="Classes" default="ActRelationship"/>
+		
+      <xs:attribute name="typeCode" type="ActRelationshipType" use="optional"/>
+		
+      <xs:attribute name="typeID" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="oid"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="realmCode" use="optional">
+			
+         <xs:simpleType>
+				
+            <xs:list itemType="cs"/>
+			
+         </xs:simpleType>
+		
+      </xs:attribute>
+		
+      <xs:attribute name="nullFlavor" type="cs" use="optional"/>
+	
+   </xs:complexType>
+
+</xs:schema>

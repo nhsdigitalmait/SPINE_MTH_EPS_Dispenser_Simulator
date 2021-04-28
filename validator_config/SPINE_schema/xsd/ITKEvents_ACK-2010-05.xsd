@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+    NHS Connecting for Health - Interoperability Toolkit Event Definitions 
+    Event Acknowledgement - ACK
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:nhs-itk:ns:201005" targetNamespace="urn:nhs-itk:ns:201005">
+	<!-- include segment definitions for ITK Events -->
+	<xsd:include schemaLocation="ITKEventsSegments-2010-05.xsd"/>
+	<!--
+    EVENT ACK
+-->
+	<!-- .. event definition ACK -->
+	<xsd:complexType name="ACK.CONTENT">
+		<xsd:sequence>
+			<xsd:element ref="MSH"/>
+			<xsd:element ref="MSA"/>
+			<xsd:element ref="ERR" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ACK" type="ACK.CONTENT"/>
+</xsd:schema>

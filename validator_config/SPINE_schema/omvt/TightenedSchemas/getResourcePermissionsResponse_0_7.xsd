@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Mastek (Syntegra) -->
+<!--
+		v0.1 	Preshit Vartak 	13 July 2007 	- First draft.
+		v0.2  Preshit Vartak	19 July 2007	- Altered the schema to encorporate naspCommonDataTypes defined in the 	"naspCommonTypes003.xsd"		
+		v0.3  Preshit Vartak	20 July 2007	- Altered the schema to use 'include' instead of 'import' for "naspCommonTypes003.xsd"
+		v0.4  Joseph Waller	01 August 2007	- Altered the schema to use naspCommoneTypes004.xsd and removed responseInteraction and responseBlock elements
+		v0.5  Joseph Waller	06 November 2007	- Updated reference to Common Types to naspCommonTypes005.xsd
+		v0.6  Joseph Waller	15 May 2008	- commented out complex types that were already defined in setResourcePermissionsRequest
+		v0.7 	Joseph Waller	12 November 2008	- updated to use new ACS common types 'naspACSCommonTypes_0_1' for new consent model
+		v0.8  Richard Robinson	23 October 2014	- Updated reference to naspACSGetCommonTypes to differentiate subtle differences in Get Set and Has
+
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://national.carerecords.nhs.uk/schema/crs/" xmlns:nsp="http://national.carerecords.nhs.uk/schema/crs/" xmlns:nspErr="http://national.carerecords.nhs.uk/schema/" targetNamespace="http://national.carerecords.nhs.uk/schema/crs/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="naspACSGetCommonTypes_0_1.xsd"/>
+	<!--removed to avoid repeated definition -->
+	<!--	<xs:complexType name="accessControlAssertionType">
+		<xs:sequence>
+			<xs:element name="permission" type="nsp:permissionType"/>
+			<xs:element name="userData" type="xs:string" minOccurs="0"/>
+			<xs:element name="resource" type="nsp:resourceType"/>
+			<xs:element name="function" type="nsp:functionType"/>
+			<xs:element name="accessor" type="nsp:accessorType"/>
+		</xs:sequence>
+	</xs:complexType>-->
+	<!--	<xs:complexType name="permissionsType">
+		<xs:sequence>
+			<xs:element name="resourceContext" type="nsp:II"/>
+			<xs:element name="accessControlAssertion" type="accessControlAssertionType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>-->
+	<xs:element name="getResourcePermissionsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="permissions" type="permissionsType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

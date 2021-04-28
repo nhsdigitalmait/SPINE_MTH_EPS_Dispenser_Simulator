@@ -1,0 +1,10 @@
+/validator_reports/**
+/transmitter_source/**
+/transmitter_sent_messages/**
+/simulator_saved_messages/**
+/messages_for_validation/**
+/logs/**
+/all_evidence/**
+/certs/**
+version_string.txt
+push_eps_dispenser_simulator_to_dockerhub.sh

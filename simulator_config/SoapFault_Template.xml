@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nasp="http://national.carerecords.nhs.uk/schema/">
+	<soap:Body>
+		<soap:Fault>
+			<faultcode>__SOAP_ERROR_FAULTCODE_REQUIRED__</faultcode>
+			<faultstring>__SOAP_ERROR_FAULTSTRING_REQUIRED__</faultstring>
+			<detail>
+				<nasp:errorList>
+					<nasp:error>
+						<nasp:codeContext>__SOAP_ERROR_CODECONTEXT__</nasp:codeContext>
+						<nasp:errorCode>__SOAP_ERROR_ERRORCODE__</nasp:errorCode>
+						<nasp:severity>__SOAP_ERROR_SEVERITY__</nasp:severity>
+						<nasp:location>__SOAP_ERROR_LOCATION__</nasp:location>
+						<nasp:description>__SOAP_ERROR_DESCRIPTION__</nasp:description>
+					</nasp:error>
+				</nasp:errorList>
+			</detail>
+		</soap:Fault>
+	</soap:Body>
+</soap:Envelope>

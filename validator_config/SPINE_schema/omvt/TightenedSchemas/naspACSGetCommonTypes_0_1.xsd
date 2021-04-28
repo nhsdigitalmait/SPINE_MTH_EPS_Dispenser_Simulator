@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Joseph Waller (BT Plc) -->
+<!--
+		v0.1 	Joseph Waller 	10 May 2008 	- Created to hold common composite ACS types to simplify creation of schema.
+		v0.2 	Joseph Waller 	12 November 2008 	- Updates to accomodate changes to the consent model.
+		v0.3  Richard Robinson	23 October 2014	- Extracted out separate naspACSCommonTypes schemas for Get, Set and Has. Updated reference to naspGetCommonTypes006 to differentiate subtle differences in Get Set and Has
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://national.carerecords.nhs.uk/schema/crs/" targetNamespace="http://national.carerecords.nhs.uk/schema/crs/" elementFormDefault="qualified">
+	<xs:include schemaLocation="naspGetCommonTypes006.xsd"/>
+	<xs:complexType name="accessControlAssertionType">
+		<xs:sequence>
+			<xs:element name="permission" type="permissionType"/>
+			<xs:element name="userData" type="xs:string" minOccurs="0"/>
+			<xs:element name="resource" type="resourceType"/>
+			<xs:element name="function" type="functionType"/>
+			<xs:element name="accessor" type="accessorType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="permissionsType">
+		<xs:sequence>
+			<xs:element name="resourceContext" type="II"/>
+			<xs:element name="accessControlAssertion" type="accessControlAssertionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="accessControlQueryType">
+		<xs:sequence>
+			<xs:element name="resourceContext" type="II"/>
+			<xs:element name="queryCriteria" type="queryCriteriaType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="queryCriteriaType">
+		<xs:sequence>
+			<xs:element name="function" type="functionType"/>
+			<xs:element name="resource" type="resourceType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

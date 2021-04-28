@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:tns="urn:nhs-itk:ns:201005" xmlns:itk="urn:nhs-itk:ns:201005" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:nhs-itk:ns:201005" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- import common ITK element definitions -->
+	<xsd:include schemaLocation="ITKDatatypes-2010-05.xsd"/>
+	<xsd:element name="PatientConsentRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="NHSNumber" type="itk:NHSNumberType"/>
+				<xsd:any namespace="##local" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PatientConsentResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="DCRConsentFlag" type="itk:DCRConsentFlagType"/>
+				<xsd:any namespace="##local" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

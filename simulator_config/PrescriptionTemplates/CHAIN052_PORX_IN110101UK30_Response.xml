@@ -1,0 +1,78 @@
+<hl7:PORX_IN110101UK30 xmlns:hl7="urn:hl7-org:v3">
+  <hl7:id root="__MSGID_UUID__" />
+  <hl7:creationTime value="__CREATION_TIMESTAMP__" />
+  <hl7:versionCode code="V3NPfIT4.2.00" />
+  <hl7:interactionId root="2.16.840.1.113883.2.1.3.2.4.12" extension="PORX_IN110101UK30" />
+  <hl7:processingCode code="P" />
+  <hl7:processingModeCode code="T" />
+  <hl7:acceptAckCode code="NE" />
+  <hl7:acknowledgement typeCode="ER">
+    <hl7:messageRef>
+      <hl7:id root="__ACKNOWLEDGED_MESSAGEID_XPATH__" />
+    </hl7:messageRef>
+  </hl7:acknowledgement>
+  <hl7:communicationFunctionRcv typeCode="RCV">
+    <hl7:device classCode="DEV" determinerCode="INSTANCE">
+      <hl7:id root="1.2.826.0.1285.0.2.0.107" extension="__ORIGINAL_SND_XPATH__" />
+    </hl7:device>
+  </hl7:communicationFunctionRcv>
+  <hl7:communicationFunctionSnd typeCode="SND">
+    <hl7:device classCode="DEV" determinerCode="INSTANCE">
+      <hl7:id root="1.2.826.0.1285.0.2.0.107" extension="__SIAB_ASID_SYSTEMPROPERTY__" />
+    </hl7:device>
+  </hl7:communicationFunctionSnd>
+  <hl7:ControlActEvent classCode="CACT" moodCode="EVN">
+    <hl7:author1 typeCode="AUT">
+      <hl7:AgentSystemSDS classCode="AGNT">
+        <hl7:agentSystemSDS classCode="DEV" determinerCode="INSTANCE">
+          <hl7:id root="1.2.826.0.1285.0.2.0.107" extension="__SIAB_ASID_SYSTEMPROPERTY__" />
+        </hl7:agentSystemSDS>
+      </hl7:AgentSystemSDS>
+    </hl7:author1>
+    <hl7:subject>
+      <hl7:PrescriptionReleaseReject moodCode="EVN" classCode="INFO">
+        <hl7:id root="__MSGID_UUID2__" />
+        <hl7:effectiveTime value="__CREATION_TIMESTAMP__" />
+        <hl7:pertinentInformation typeCode="PERT" contextConductionInd="true">
+          <hl7:seperatableInd value="false" />
+          <hl7:pertinentRejectionReason type="Observation" classCode="OBS" moodCode="EVN">
+            <hl7:code code="PRRR" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.30" />
+            <hl7:text>The prescription is with another dispenser so it cannot be released.</hl7:text>
+            <hl7:value code="0004" codeSystem="2.16.840.1.113883.2.1.3.2.4.16.34" displayName="Prescription is with another dispenser" />
+            <hl7:performer typeCode="PRF">
+              <hl7:time value="20070927084643" />
+              <hl7:AgentPerson classCode="AGNT">
+                <hl7:id root="1.2.826.0.1285.0.2.0.67" extension="R1290" />
+                <hl7:code codeSystem="1.2.826.0.1285.0.2.1.104" code="S0050:G0200:R1290" />
+                <hl7:telecom use="WP" value="tel:01208812760" />
+                <hl7:agentPerson classCode="PSN" determinerCode="INSTANCE">
+                  <hl7:id root="1.2.826.0.1285.0.2.0.65" extension="85677" />
+                  <hl7:name use="L">WELSH</hl7:name>
+                </hl7:agentPerson>
+                <hl7:representedOrganization classCode="ORG" determinerCode="INSTANCE">
+                  <hl7:id root="1.2.826.0.1285.0.1.10" extension="FH878" />
+                  <hl7:code codeSystem="2.16.840.1.113883.2.1.3.2.4.17.94" code="003" />
+                  <hl7:name>BOOTS THE CHEMISTS LTD</hl7:name>
+                  <hl7:telecom use="WP" value="tel:01208812760" />
+                  <hl7:addr use="WP">
+                    <hl7:streetAddressLine>REGENCY ARCADE</hl7:streetAddressLine>
+                    <hl7:streetAddressLine>23 MOLESWORTH STREET</hl7:streetAddressLine>
+                    <hl7:streetAddressLine>WADEBRIDGE</hl7:streetAddressLine>
+                    <hl7:streetAddressLine>CORNWALL</hl7:streetAddressLine>
+                    <hl7:postalCode>PL27 7DH</hl7:postalCode>
+                  </hl7:addr>
+                </hl7:representedOrganization>
+              </hl7:AgentPerson>
+            </hl7:performer>
+          </hl7:pertinentRejectionReason>
+        </hl7:pertinentInformation>
+        <hl7:reversalOf typeCode="REV" inversionInd="false" negationInd="false">
+          <hl7:seperatableInd value="true" />
+          <hl7:priorPrescriptionReleaseRequestRef classCode="INFO" moodCode="RQO">
+            <hl7:id root="__REQ_CLINICAL_DOC_MESSAGEID_XPATH__" />
+          </hl7:priorPrescriptionReleaseRequestRef>
+        </hl7:reversalOf>
+      </hl7:PrescriptionReleaseReject>
+    </hl7:subject>
+  </hl7:ControlActEvent>
+</hl7:PORX_IN110101UK30>

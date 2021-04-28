@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:itk="urn:nhs-itk:ns:201005" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:nhs-itk:ns:201005" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:element name="QueueMessage">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="SubscriberName" type="xsd:string"/>
+				<xsd:element name="ServiceMessageType" type="xsd:string" minOccurs="0"/>
+				<!-- This is the service name as defined in the corresponding WSDL, e.g. cancelAdmitPatient.
+                          -->
+				<xsd:element name="RequestedMessageCount" type="xsd:integer" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="QueueMessageResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="MessageCount" type="xsd:integer"/>
+				<xsd:element name="Message" type="itk:MessageDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:any namespace="##local" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="QueueConfirmMessageReceipt">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="MessageHandle" type="xsd:string" maxOccurs="unbounded"/>
+				<xsd:any namespace="##local" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="MessageDetails">
+		<xsd:sequence>
+			<xsd:element name="MessagePayload" type="xsd:string"/>
+			<xsd:element name="ServiceMessageType" type="xsd:string"/>
+			<xsd:element name="MessageHandle" type="xsd:string"/>
+			<xsd:any namespace="##local" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,8 @@
+version: '2.0'
+services:
+    tkw_uec_provider_simulator:
+        ports:
+            - '4434:4434'
+        volumes:
+            - '${HOME}/Scratch/data:/home/service/data'
+        image: 'nhsdigitalmait/tkw_uec_provider_simulator:0.5'

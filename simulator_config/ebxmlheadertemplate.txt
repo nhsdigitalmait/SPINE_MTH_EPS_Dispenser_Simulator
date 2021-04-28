@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP:Envelope xmlns:xsi="http://www.w3c.org/2001/XML-Schema-Instance" xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd" xmlns:hl7ebxml="urn:hl7-org:transport/ebxml/DSTUv1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+<SOAP:Header>
+	<eb:MessageHeader SOAP:mustUnderstand="1" eb:version="2.0">
+		<eb:From>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">__FROMPARTYID__</eb:PartyId>
+		</eb:From>
+		<eb:To>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">__TOPARTYID__</eb:PartyId>
+		</eb:To>
+		<eb:CPAId>__CPAID__</eb:CPAId>
+		<eb:ConversationId>__CONVERSATIONID__</eb:ConversationId>
+		<eb:Service>__SERVICENAME__</eb:Service>
+		<eb:Action>__ACTIONNAME__</eb:Action>
+		<eb:MessageData>
+			<eb:MessageId>__MESSAGEID__</eb:MessageId>
+			<eb:Timestamp>__TIMESTAMP__</eb:Timestamp>
+		</eb:MessageData>
+		__DUPLICATEELIMINATION__
+	</eb:MessageHeader>
+	__ACKREQUESTED__
+	__SYNCREPLY__
+</SOAP:Header>
+<SOAP:Body>
+	<eb:Manifest SOAP:mustUnderstand="1" eb:version="2.0">
+		<eb:Reference xlink:href="__HL7XLINKREF__">
+			<eb:Schema eb:location="http://www.nhsia.nhs.uk/schemas/HL7-Message.xsd" eb:version="1.0"/>
+			<eb:Description xml:lang="en">HL7 payload</eb:Description> 
+			<hl7ebxml:Payload style="HL7" encoding="XML" version="3.0"/>
+		</eb:Reference>
+	</eb:Manifest>
+</SOAP:Body>
+</SOAP:Envelope>

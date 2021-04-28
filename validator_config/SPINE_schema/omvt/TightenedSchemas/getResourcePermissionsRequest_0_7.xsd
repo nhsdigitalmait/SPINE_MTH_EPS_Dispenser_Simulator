@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Robert Stanger (BT Syntegra) -->
+<!--
+		v0.1 	Preshit Vartak 	13 July 2007 	- First draft.
+		v0.2  Preshit Vartak	19 July 2007	- Altered the schema to encorporate naspCommonDataTypes defined in the 	"naspCommonTypes003.xsd"
+		v0.3  Preshit Vartak	20 July 2007	- Altered the schema to use 'include' instead of import' for "naspCommonTypes003.xsd"
+		v0.4  Joseph Waller	01 August 2007	- Altered the schema to use naspCommoneTypes004.xsd and removed requestInteraction and sender elements
+		v0.5  Joseph Waller	06 November 2007	- Updated reference to Common Types to naspCommonTypes005.xsd
+		v0.6  Joseph Waller	10 May 2008	- Updated reference to Common Types to naspACSCommonTypes.xsd
+		v0.7 	Joseph Waller	12 November 2008	- updated to use new ACS common types 'naspACSCommonTypes_0_1' for new consent model
+		v0.8  Richard Robinson	23 October 2014	- Updated reference to naspACSGetCommonTypes to differentiate subtle differences in Get Set and Has
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://national.carerecords.nhs.uk/schema/crs/" xmlns:nsp="http://national.carerecords.nhs.uk/schema/crs/" targetNamespace="http://national.carerecords.nhs.uk/schema/crs/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="naspACSGetCommonTypes_0_1.xsd"/>
+	<xs:element name="getResourcePermissionsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="accessControlQuery" type="accessControlQueryType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--	<xs:complexType name="accessControlQueryType">
+		<xs:sequence>
+			<xs:element name="resourceContext" type="II"/>
+			<xs:element name="queryCriteria" type="queryCriteriaType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="queryCriteriaType">
+		<xs:sequence>
+			<xs:element name="function" type="functionType"/>
+			<xs:element name="resource" type="resourceType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>-->
+</xs:schema>

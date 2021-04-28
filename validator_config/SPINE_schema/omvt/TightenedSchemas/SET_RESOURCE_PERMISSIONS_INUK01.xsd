@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--version = 0.3
+		v0.2  Joseph Waller	10 May 2008	- Updated reference to setResourcePermissionsRequest_0_8 due to new Common Types
+		v0.3  Richard Robinson	23 October 2014	- Updated/corrected accessControlAssertion to have a cardinality to match the EIS
+-->
+<xs:schema xmlns="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:crs="http://national.carerecords.nhs.uk/schema/crs/" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+	<xs:include schemaLocation="../dt/infrastructureRoot_7202.xsd"/>
+	<xs:include schemaLocation="../dt/datatypeflavours_7202.xsd"/>
+	<xs:include schemaLocation="../dt/NHSVocab_7202.xsd"/>
+	<xs:include schemaLocation="MCCI_MT010101UK12_7202.xsd"/>
+	<xs:include schemaLocation="MCAI_MT040101UK03_7202.xsd"/>
+	<!--	<xs:include schemaLocation="PRPA_MT000203UK03.xsd"/>-->
+	<!-- amended for WSDL -->
+	<xs:import namespace="http://national.carerecords.nhs.uk/schema/crs/" schemaLocation="setResourcePermissionsRequest_0_8.xsd"/>
+	<!-- / amended for WSDL -->
+	<xs:element name="SET_RESOURCE_PERMISSIONS_INUK01">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="SET_RESOURCE_PERMISSIONS_INUK01.MCCI_MT010101UK12.Message"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SET_RESOURCE_PERMISSIONS_INUK01.MCCI_MT010101UK12.Message">
+		<xs:sequence>
+			<xs:group ref="InfrastructureRootElements"/>
+			<xs:element name="id" type="II.NPfIT.uuid.mandatory"/>
+			<xs:element name="creationTime">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="TS">
+							<xs:attribute name="value" type="ts" use="required"/>
+							<xs:attribute name="updateMode" type="cs" use="prohibited"/>
+							<xs:attribute name="nullFlavor" type="cs_NullFlavor" use="prohibited"/>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="versionCode">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="CS">
+							<xs:attribute name="code" type="HL7StandardVersionCode_code" use="required"/>
+							<xs:attribute name="codeSystem" type="oid" use="prohibited"/>
+							<xs:attribute name="codeSystemName" type="st" use="prohibited"/>
+							<xs:attribute name="codeSystemVersion" type="st" use="prohibited"/>
+							<xs:attribute name="updateMode" type="cs" use="prohibited"/>
+							<xs:attribute name="nullFlavor" type="cs_NullFlavor" use="prohibited"/>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="interactionId">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="II">
+							<xs:attribute name="root" type="II.NPfIT.Message.oid" use="required"/>
+							<xs:attribute name="extension" type="II.NPfIT.Message.extension2" use="required"/>
+							<xs:attribute name="nullFlavor" type="cs_NullFlavor" use="prohibited"/>
+							<xs:attribute name="updateMode" type="cs_UpdateMode" use="prohibited"/>
+							<xs:attribute name="assigningAuthorityName" type="st" use="prohibited"/>
+							<xs:attribute name="displayable" type="bl" use="prohibited"/>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="processingCode">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="CS">
+							<xs:attribute name="code" type="ProcessingID_code" use="required"/>
+							<xs:attribute name="codeSystem" type="oid" use="prohibited"/>
+							<xs:attribute name="codeSystemName" type="st" use="prohibited"/>
+							<xs:attribute name="codeSystemVersion" type="st" use="prohibited"/>
+							<xs:attribute name="updateMode" type="cs" use="prohibited"/>
+							<xs:attribute name="nullFlavor" type="cs_NullFlavor" use="prohibited"/>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="processingModeCode">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="CS">
+							<xs:attribute name="code" type="ProcessingMode_code" use="required"/>
+							<xs:attribute name="codeSystem" type="oid" use="prohibited"/>
+							<xs:attribute name="codeSystemName" type="st" use="prohibited"/>
+							<xs:attribute name="codeSystemVersion" type="st" use="prohibited"/>
+							<xs:attribute name="updateMode" type="cs" use="prohibited"/>
+							<xs:attribute name="nullFlavor" type="cs_NullFlavor" use="prohibited"/>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="acceptAckCode" type="CS"/>
+			<xs:element name="communicationFunctionRcv" type="MCCI_MT010101UK12.CommunicationFunctionRcv" maxOccurs="unbounded"/>
+			<xs:element name="communicationFunctionSnd" type="MCCI_MT010101UK12.CommunicationFunctionSnd"/>
+			<xs:element name="ControlActEvent" type="SET_RESOURCE_PERMISSIONS_INUK01.MCAI_MT040101UK03.ControlActEvent" nillable="true"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="InfrastructureRootAttributes"/>
+	</xs:complexType>
+	<xs:complexType name="SET_RESOURCE_PERMISSIONS_INUK01.MCAI_MT040101UK03.ControlActEvent">
+		<xs:sequence>
+			<xs:group ref="InfrastructureRootElements"/>
+			<xs:element name="author" type="MCAI_MT040101UK03.Author" nillable="true" minOccurs="0"/>
+			<xs:element name="author1" type="MCAI_MT040101UK03.Author2" maxOccurs="2"/>
+			<xs:element name="reason" type="MCAI_MT040101UK03.Reason" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+			<!--<xs:element name="subject" type="SET_RESOURCE_PERMISSIONS_INUK01.MCAI_MT040101UK03.Subject" nillable="true"/>-->
+			<!-- amedned for WSDL -->
+			<xs:element ref="crs:setResourcePermissionsRequest"/>
+			<!-- / amedned for WSDL -->
+		</xs:sequence>
+		<xs:attributeGroup ref="InfrastructureRootAttributes"/>
+		<xs:attribute name="classCode" type="cs" use="required"/>
+		<xs:attribute name="moodCode" type="cs" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="SET_RESOURCE_PERMISSIONS_INUK01.MCAI_MT040101UK03.Subject">
+		<xs:sequence>
+			<xs:group ref="InfrastructureRootElements"/>
+			<!-- changed for pseudo HL7 messaging -->
+			<xs:element ref="crs:setResourcePermissionsRequest"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="InfrastructureRootAttributes"/>
+		<xs:attribute name="typeCode" type="cs" use="required" fixed="SUBJ"/>
+		<xs:attribute name="contextConductionInd" type="bl" use="required" fixed="false"/>
+	</xs:complexType>
+</xs:schema>

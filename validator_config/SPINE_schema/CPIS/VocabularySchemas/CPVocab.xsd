@@ -1,0 +1,869 @@
+<xs:schema xmlns="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified" version="2.0">
+	<xs:include schemaLocation="../dt/datatypes.xsd"/>
+	<xs:simpleType name="CP-ISAcknowledgementType_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="CPISAF"/>
+			<xs:enumeration value="CPISAR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISAcknowledgementType_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="CP-IS Acknowledgement File"/>
+			<xs:enumeration value="CP-IS Acknowledgement Record"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISAcknowledgementType_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.472"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISAcknowledgementType">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISAcknowledgementType_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISAcknowledgementType_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISAcknowledgementType">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISAcknowledgementType_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CP-ISMessageType_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISMessageType_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="CP-IS Local Authority Upload"/>
+			<xs:enumeration value="CP-IS Local Authority Acknowledgement Response"/>
+			<xs:enumeration value="CP-IS NHS Query"/>
+			<xs:enumeration value="CP-IS NHS Query Response"/>
+			<xs:enumeration value="CP-IS Access to Service Notification"/>
+			<xs:enumeration value="CP-IS Inactive NHS Number Notification"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISMessageType_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.470"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISMessageType">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISMessageType_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISMessageType_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISMessageType">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISMessageType_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CP-ISObservationType_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="CPPI"/>
+			<xs:enumeration value="CPPIU"/>
+			<xs:enumeration value="CPPSD"/>
+			<xs:enumeration value="CPPED"/>
+			<xs:enumeration value="CPPDD"/>
+			<xs:enumeration value="LACI"/>
+			<xs:enumeration value="LACIU"/>
+			<xs:enumeration value="LACSD"/>
+			<xs:enumeration value="LACED"/>
+			<xs:enumeration value="LACDD"/>
+			<xs:enumeration value="UCPI"/>
+			<xs:enumeration value="UCPIU"/>
+			<xs:enumeration value="UCPSD"/>
+			<xs:enumeration value="UCPED"/>
+			<xs:enumeration value="UCPDD"/>
+			<xs:enumeration value="TRAR"/>
+			<xs:enumeration value="TRR"/>
+			<xs:enumeration value="LAUFI"/>
+			<xs:enumeration value="TRCR"/>
+			<xs:enumeration value="CRA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISObservationType_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="Child Protection Plan Information"/>
+			<xs:enumeration value="Child Protection Plan Information Upload"/>
+			<xs:enumeration value="Child Protection Plan Start Date"/>
+			<xs:enumeration value="Child Protection Plan End Date"/>
+			<xs:enumeration value="Child Protection Plan Delete Date"/>
+			<xs:enumeration value="Looked After Child Information"/>
+			<xs:enumeration value="Looked After Child Information Upload"/>
+			<xs:enumeration value="Looked After Child Start Date"/>
+			<xs:enumeration value="Looked After Child End Date"/>
+			<xs:enumeration value="Looked After Child Delete Date"/>
+			<xs:enumeration value="Unborn Child Plan Information"/>
+			<xs:enumeration value="Unborn Child Plan Information Upload"/>
+			<xs:enumeration value="Unborn Child Plan Start Date"/>
+			<xs:enumeration value="Unborn Child Plan End Date"/>
+			<xs:enumeration value="Unborn Child Plan Delete Date"/>
+			<xs:enumeration value="Total Returned Access Records"/>
+			<xs:enumeration value="Total Returned Records"/>
+			<xs:enumeration value="LA Upload File Id"/>
+			<xs:enumeration value="Total Returned Child Records"/>
+			<xs:enumeration value="CP-IS Record Access"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISObservationType_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.469"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISObservationType">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISObservationType_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISObservationType_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISObservationType">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISObservationType_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CP-ISUploadFileResponse_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="CPF01"/>
+			<xs:enumeration value="CPF02"/>
+			<xs:enumeration value="CPF03"/>
+			<xs:enumeration value="CPF04"/>
+			<xs:enumeration value="CPF05"/>
+			<xs:enumeration value="CPF06"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISUploadFileResponse_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="File Level Error"/>
+			<xs:enumeration value="Successful File Upload"/>
+			<xs:enumeration value="Partial File Upload"/>
+			<xs:enumeration value="Unsuccessful File Upload"/>
+			<xs:enumeration value="PDS Error - PDS Unavailable"/>
+			<xs:enumeration value="Spine ii rejected the request because this version of the CPIS Client is no longer supported"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISUploadFileResponse_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.474"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISUploadFileResponse">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISUploadFileResponse_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISUploadFileResponse_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISUploadFileResponse">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISUploadFileResponse_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CP-ISUploadRecordResponse_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>3.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="CPR01"/>
+			<xs:enumeration value="CPR02"/>
+			<xs:enumeration value="CPR03"/>
+			<xs:enumeration value="CPR04"/>
+			<xs:enumeration value="CPR05"/>
+			<xs:enumeration value="CPR06"/>
+			<xs:enumeration value="CPR07"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISUploadRecordResponse_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>3.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="PDS Error - No Match Found for NHS Number"/>
+			<xs:enumeration value="PDS Error - NHS Number Matched, but Sensitive Record"/>
+			<xs:enumeration value="PDS Error - NHS Number not Verified"/>
+			<xs:enumeration value="PDS Error - NHS Number Format Incorrect"/>
+			<xs:enumeration value="PDS Error - NHS Number Verified, but Superseded"/>
+			<xs:enumeration value="Successful Record Upload"/>
+			<xs:enumeration value="Unsucessful Record Upload"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISUploadRecordResponse_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>3.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.473"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISUploadRecordResponse">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISUploadRecordResponse_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISUploadRecordResponse_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISUploadRecordResponse">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISUploadRecordResponse_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="RoleCode_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>active</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="ACC"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="AMB"/>
+			<xs:enumeration value="AMPUT"/>
+			<xs:enumeration value="AUNT"/>
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="BF"/>
+			<xs:enumeration value="BILL"/>
+			<xs:enumeration value="BL"/>
+			<xs:enumeration value="BMTC"/>
+			<xs:enumeration value="BMTU"/>
+			<xs:enumeration value="BR"/>
+			<xs:enumeration value="BREAST"/>
+			<xs:enumeration value="BRO"/>
+			<xs:enumeration value="BROINLAW"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="CANC"/>
+			<xs:enumeration value="CAPC"/>
+			<xs:enumeration value="CARD"/>
+			<xs:enumeration value="CATH"/>
+			<xs:enumeration value="CCU"/>
+			<xs:enumeration value="CHEST"/>
+			<xs:enumeration value="CHILD"/>
+			<xs:enumeration value="CHLDADOPT"/>
+			<xs:enumeration value="CHLDFOST"/>
+			<xs:enumeration value="CHLDINLAW"/>
+			<xs:enumeration value="CHR"/>
+			<xs:enumeration value="CO"/>
+			<xs:enumeration value="COAG"/>
+			<xs:enumeration value="COMM"/>
+			<xs:enumeration value="COUSN"/>
+			<xs:enumeration value="CRS"/>
+			<xs:enumeration value="CVDX"/>
+			<xs:enumeration value="DA"/>
+			<xs:enumeration value="DADDR"/>
+			<xs:enumeration value="DAU"/>
+			<xs:enumeration value="DAUADOPT"/>
+			<xs:enumeration value="DAUFOST"/>
+			<xs:enumeration value="DAUINLAW"/>
+			<xs:enumeration value="DERM"/>
+			<xs:enumeration value="DOMPART"/>
+			<xs:enumeration value="DR"/>
+			<xs:enumeration value="DU"/>
+			<xs:enumeration value="DX"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="ECHO"/>
+			<xs:enumeration value="ECON"/>
+			<xs:enumeration value="ENDO"/>
+			<xs:enumeration value="ENDOS"/>
+			<xs:enumeration value="ENT"/>
+			<xs:enumeration value="EPIL"/>
+			<xs:enumeration value="ER"/>
+			<xs:enumeration value="ETU"/>
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="FAMDEP"/>
+			<xs:enumeration value="FAMMEMB"/>
+			<xs:enumeration value="FI"/>
+			<xs:enumeration value="FM"/>
+			<xs:enumeration value="FMC"/>
+			<xs:enumeration value="FRND"/>
+			<xs:enumeration value="FSTUD"/>
+			<xs:enumeration value="FTH"/>
+			<xs:enumeration value="FTHINLAW"/>
+			<xs:enumeration value="GACH"/>
+			<xs:enumeration value="G"/>
+			<xs:enumeration value="GGRFTH"/>
+			<xs:enumeration value="GGRMTH"/>
+			<xs:enumeration value="GGRPRN"/>
+			<xs:enumeration value="GI"/>
+			<xs:enumeration value="GIDX"/>
+			<xs:enumeration value="GIM"/>
+			<xs:enumeration value="GRFTH"/>
+			<xs:enumeration value="GRMTH"/>
+			<xs:enumeration value="GRNDCHILD"/>
+			<xs:enumeration value="GRNDDAU"/>
+			<xs:enumeration value="GRNDSON"/>
+			<xs:enumeration value="GRPRN"/>
+			<xs:enumeration value="GT"/>
+			<xs:enumeration value="GYN"/>
+			<xs:enumeration value="HAND"/>
+			<xs:enumeration value="HANDIC"/>
+			<xs:enumeration value="HBRO"/>
+			<xs:enumeration value="HD"/>
+			<xs:enumeration value="HEM"/>
+			<xs:enumeration value="HOSP"/>
+			<xs:enumeration value="HSIB"/>
+			<xs:enumeration value="HTN"/>
+			<xs:enumeration value="HSIS"/>
+			<xs:enumeration value="HU"/>
+			<xs:enumeration value="HUSB"/>
+			<xs:enumeration value="ICU"/>
+			<xs:enumeration value="IEC"/>
+			<xs:enumeration value="INFD"/>
+			<xs:enumeration value="INJ"/>
+			<xs:enumeration value="INV"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="LY"/>
+			<xs:enumeration value="LYMPH"/>
+			<xs:enumeration value="MGEN"/>
+			<xs:enumeration value="MHSP"/>
+			<xs:enumeration value="MOBL"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="MTH"/>
+			<xs:enumeration value="MTHINLOAW"/>
+			<xs:enumeration value="MU"/>
+			<xs:enumeration value="NBOR"/>
+			<xs:enumeration value="NBRO"/>
+			<xs:enumeration value="NCCF"/>
+			<xs:enumeration value="NCCS"/>
+			<xs:enumeration value="NCHILD"/>
+			<xs:enumeration value="NEPH"/>
+			<xs:enumeration value="NEPHEW"/>
+			<xs:enumeration value="NEUR"/>
+			<xs:enumeration value="NFTH"/>
+			<xs:enumeration value="NIECE"/>
+			<xs:enumeration value="NIENEPH"/>
+			<xs:enumeration value="NMTH"/>
+			<xs:enumeration value="NOK"/>
+			<xs:enumeration value="NPRN"/>
+			<xs:enumeration value="NS"/>
+			<xs:enumeration value="NSIB"/>
+			<xs:enumeration value="NSIS"/>
+			<xs:enumeration value="O"/>
+			<xs:enumeration value="OB"/>
+			<xs:enumeration value="OF"/>
+			<xs:enumeration value="OMS"/>
+			<xs:enumeration value="ONCL"/>
+			<xs:enumeration value="OPH"/>
+			<xs:enumeration value="ORG"/>
+			<xs:enumeration value="ORTHO"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="PAINCL"/>
+			<xs:enumeration value="PAYOR"/>
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="PEDC"/>
+			<xs:enumeration value="PEDCARD"/>
+			<xs:enumeration value="PEDE"/>
+			<xs:enumeration value="PEDGI"/>
+			<xs:enumeration value="PEDHEM"/>
+			<xs:enumeration value="PEDHO"/>
+			<xs:enumeration value="PEDICU"/>
+			<xs:enumeration value="PEDID"/>
+			<xs:enumeration value="PEDNEPH"/>
+			<xs:enumeration value="PEDNICU"/>
+			<xs:enumeration value="PEDRHEUM"/>
+			<xs:enumeration value="PEDU"/>
+			<xs:enumeration value="PH"/>
+			<xs:enumeration value="PHARM"/>
+			<xs:enumeration value="PHU"/>
+			<xs:enumeration value="PL"/>
+			<xs:enumeration value="PLS"/>
+			<xs:enumeration value="POD"/>
+			<xs:enumeration value="PRC"/>
+			<xs:enumeration value="PREV"/>
+			<xs:enumeration value="PRN"/>
+			<xs:enumeration value="PRNINLAW"/>
+			<xs:enumeration value="PROCTO"/>
+			<xs:enumeration value="PROFF"/>
+			<xs:enumeration value="PROS"/>
+			<xs:enumeration value="PSI"/>
+			<xs:enumeration value="PSTUD"/>
+			<xs:enumeration value="PSY"/>
+			<xs:enumeration value="PSYCHF"/>
+			<xs:enumeration value="PT"/>
+			<xs:enumeration value="PTRES"/>
+			<xs:enumeration value="Q"/>
+			<xs:enumeration value="R"/>
+			<xs:enumeration value="RADDX"/>
+			<xs:enumeration value="RC"/>
+			<xs:enumeration value="RH"/>
+			<xs:enumeration value="RHEUM"/>
+			<xs:enumeration value="RHU"/>
+			<xs:enumeration value="ROOM"/>
+			<xs:enumeration value="RTF"/>
+			<xs:enumeration value="SCHOOL"/>
+			<xs:enumeration value="SELF"/>
+			<xs:enumeration value="SH"/>
+			<xs:enumeration value="SIB"/>
+			<xs:enumeration value="SIBINLAW"/>
+			<xs:enumeration value="SIGOTHR"/>
+			<xs:enumeration value="SIS"/>
+			<xs:enumeration value="SISLINLAW"/>
+			<xs:enumeration value="SLEEP"/>
+			<xs:enumeration value="SNF"/>
+			<xs:enumeration value="SON"/>
+			<xs:enumeration value="SONADOPT"/>
+			<xs:enumeration value="SONFOST"/>
+			<xs:enumeration value="SONINLAW"/>
+			<xs:enumeration value="SPMED"/>
+			<xs:enumeration value="SPON"/>
+			<xs:enumeration value="SPS"/>
+			<xs:enumeration value="STPBRO"/>
+			<xs:enumeration value="STPCHLD"/>
+			<xs:enumeration value="STPDAU"/>
+			<xs:enumeration value="STPFTH"/>
+			<xs:enumeration value="STPMTH"/>
+			<xs:enumeration value="STPPRN"/>
+			<xs:enumeration value="STPSIB"/>
+			<xs:enumeration value="STPSIS"/>
+			<xs:enumeration value="STPSON"/>
+			<xs:enumeration value="STUD"/>
+			<xs:enumeration value="SU"/>
+			<xs:enumeration value="SURF"/>
+			<xs:enumeration value="TR"/>
+			<xs:enumeration value="TRAVEL"/>
+			<xs:enumeration value="TRB"/>
+			<xs:enumeration value="UNCLE"/>
+			<xs:enumeration value="URO"/>
+			<xs:enumeration value="V"/>
+			<xs:enumeration value="VL"/>
+			<xs:enumeration value="WIFE"/>
+			<xs:enumeration value="WL"/>
+			<xs:enumeration value="WND"/>
+			<xs:enumeration value="WO"/>
+			<xs:enumeration value="WORK"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RoleCode_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>active</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="accident site"/>
+			<xs:enumeration value="Allergy clinic"/>
+			<xs:enumeration value="Ambulance"/>
+			<xs:enumeration value="Amputee clinic"/>
+			<xs:enumeration value="aunt"/>
+			<xs:enumeration value="Blind"/>
+			<xs:enumeration value="Beef"/>
+			<xs:enumeration value="Billing Contact"/>
+			<xs:enumeration value="Broiler"/>
+			<xs:enumeration value="Bone marrow transplant clinic"/>
+			<xs:enumeration value="Bone marrow transplant unit"/>
+			<xs:enumeration value="Breeder"/>
+			<xs:enumeration value="Breast clinic"/>
+			<xs:enumeration value="Brother"/>
+			<xs:enumeration value="brother-in-law"/>
+			<xs:enumeration value="Calibrator"/>
+			<xs:enumeration value="Child and adolescent neurology clinic"/>
+			<xs:enumeration value="Child and adolescent psychiatry clinic"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities"/>
+			<xs:enumeration value="Cardiac catheterization lab"/>
+			<xs:enumeration value="Coronary care unit"/>
+			<xs:enumeration value="Chest unit"/>
+			<xs:enumeration value="Child"/>
+			<xs:enumeration value="adopted child"/>
+			<xs:enumeration value="foster child"/>
+			<xs:enumeration value="child-in-law"/>
+			<xs:enumeration value="Chronic Care Facility"/>
+			<xs:enumeration value="Companion"/>
+			<xs:enumeration value="Coagulation clinic"/>
+			<xs:enumeration value="Community Location"/>
+			<xs:enumeration value="cousin"/>
+			<xs:enumeration value="Colon and rectal surgery clinic"/>
+			<xs:enumeration value="Cardiovascular diagnostics or therapeutics unit"/>
+			<xs:enumeration value="Dairy"/>
+			<xs:enumeration value="Delivery Address"/>
+			<xs:enumeration value="natural daughter"/>
+			<xs:enumeration value="adopted daughter"/>
+			<xs:enumeration value="foster daughter"/>
+			<xs:enumeration value="daughter-in-law"/>
+			<xs:enumeration value="Dermatology clinic"/>
+			<xs:enumeration value="domestic partner"/>
+			<xs:enumeration value="Draft"/>
+			<xs:enumeration value="Dual"/>
+			<xs:enumeration value="Diagnostics or therapeutics unit"/>
+			<xs:enumeration value="Electronic QC"/>
+			<xs:enumeration value="Echocardiography lab"/>
+			<xs:enumeration value="emergency contact"/>
+			<xs:enumeration value="Endocrinology clinic"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Endoscopy"/>
+			<xs:enumeration value="Otorhinolaryngology clinic"/>
+			<xs:enumeration value="Epilepsy unit"/>
+			<xs:enumeration value="Emergency room"/>
+			<xs:enumeration value="Emergency trauma unit"/>
+			<xs:enumeration value="Filler Proficiency"/>
+			<xs:enumeration value="family dependent"/>
+			<xs:enumeration value="Family Member"/>
+			<xs:enumeration value="Fiber"/>
+			<xs:enumeration value="Family Member"/>
+			<xs:enumeration value="Family medicine clinic"/>
+			<xs:enumeration value="unrelated friend"/>
+			<xs:enumeration value="full-time student"/>
+			<xs:enumeration value="Father"/>
+			<xs:enumeration value="father-in-law"/>
+			<xs:enumeration value="General acute care hospital"/>
+			<xs:enumeration value="Group"/>
+			<xs:enumeration value="great grandfather"/>
+			<xs:enumeration value="great grandmother"/>
+			<xs:enumeration value="great grandparent"/>
+			<xs:enumeration value="Gastroenterology clinic"/>
+			<xs:enumeration value="Gastroenterology diagnostics or therapeutics lab"/>
+			<xs:enumeration value="General internal medicine clinic"/>
+			<xs:enumeration value="Grandfather"/>
+			<xs:enumeration value="Grandmother"/>
+			<xs:enumeration value="grandchild"/>
+			<xs:enumeration value="granddaughter"/>
+			<xs:enumeration value="grandson"/>
+			<xs:enumeration value="Grandparent"/>
+			<xs:enumeration value="Guarantor"/>
+			<xs:enumeration value="Gynecology clinic"/>
+			<xs:enumeration value="Hand clinic"/>
+			<xs:enumeration value="handicapped dependent"/>
+			<xs:enumeration value="half-brother"/>
+			<xs:enumeration value="Hemodialysis unit"/>
+			<xs:enumeration value="Hematology clinic"/>
+			<xs:enumeration value="Hospital"/>
+			<xs:enumeration value="half-sibling"/>
+			<xs:enumeration value="Hypertension clinic"/>
+			<xs:enumeration value="half-sister"/>
+			<xs:enumeration value="Hospital unit"/>
+			<xs:enumeration value="husband"/>
+			<xs:enumeration value="Intensive care unit"/>
+			<xs:enumeration value="Impairment evaluation center"/>
+			<xs:enumeration value="Infectious disease clinic"/>
+			<xs:enumeration value="injured plaintiff"/>
+			<xs:enumeration value="Infertility clinic"/>
+			<xs:enumeration value="Pool"/>
+			<xs:enumeration value="Layer"/>
+			<xs:enumeration value="Lympedema clinic"/>
+			<xs:enumeration value="Medical genetics clinic"/>
+			<xs:enumeration value="Military Hospital"/>
+			<xs:enumeration value="Mobile Unit"/>
+			<xs:enumeration value="Meat"/>
+			<xs:enumeration value="Mother"/>
+			<xs:enumeration value="mother-in-law"/>
+			<xs:enumeration value="Multiplier"/>
+			<xs:enumeration value="neighbour"/>
+			<xs:enumeration value="natural brother"/>
+			<xs:enumeration value="Nursing or custodial care facility"/>
+			<xs:enumeration value="Neurology critical care and stroke unit"/>
+			<xs:enumeration value="natural child"/>
+			<xs:enumeration value="Nephrology clinic"/>
+			<xs:enumeration value="nephew"/>
+			<xs:enumeration value="Neurology clinic"/>
+			<xs:enumeration value="natural father"/>
+			<xs:enumeration value="niece"/>
+			<xs:enumeration value="niece/nephew"/>
+			<xs:enumeration value="natural mother"/>
+			<xs:enumeration value="next of kin"/>
+			<xs:enumeration value="natural parent"/>
+			<xs:enumeration value="Neurosurgery unit"/>
+			<xs:enumeration value="natural sibling"/>
+			<xs:enumeration value="natural sister"/>
+			<xs:enumeration value="Operator Proficiency"/>
+			<xs:enumeration value="Obstetrics clinic"/>
+			<xs:enumeration value="Outpatient facility"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Surgery, Oral/Maxillofacial"/>
+			<xs:enumeration value="Medical oncology clinic"/>
+			<xs:enumeration value="Opthalmology clinic"/>
+			<xs:enumeration value="organizational contact"/>
+			<xs:enumeration value="Orthopedics clinic"/>
+			<xs:enumeration value="Patient"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Pain"/>
+			<xs:enumeration value="Payor Contact"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Primary Care"/>
+			<xs:enumeration value="Pediatrics clinic"/>
+			<xs:enumeration value="Pediatric cardiology clinic"/>
+			<xs:enumeration value="Pediatric endocrinology clinic"/>
+			<xs:enumeration value="Pediatric gastroenterology clinic"/>
+			<xs:enumeration value="Pediatric hematology clinic"/>
+			<xs:enumeration value="Pediatric oncology clinic"/>
+			<xs:enumeration value="Pediatric intensive care unit"/>
+			<xs:enumeration value="Pediatric infectious disease clinic"/>
+			<xs:enumeration value="Pediatric nephrology clinic"/>
+			<xs:enumeration value="Pediatric neonatal intensive care unit"/>
+			<xs:enumeration value="Pediatric rheumatology clinic"/>
+			<xs:enumeration value="Pediatric unit"/>
+			<xs:enumeration value="Policy Holder"/>
+			<xs:enumeration value="Pharmacy"/>
+			<xs:enumeration value="Hospital Units; Psychiatric Unit"/>
+			<xs:enumeration value="Pleasure"/>
+			<xs:enumeration value="Plastic surgery clinic"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Podiatric"/>
+			<xs:enumeration value="Pain rehabilitation center"/>
+			<xs:enumeration value="Preventive medicine clinic"/>
+			<xs:enumeration value="Parent"/>
+			<xs:enumeration value="parent in-law"/>
+			<xs:enumeration value="Proctology clinic"/>
+			<xs:enumeration value="Provider's Office"/>
+			<xs:enumeration value="Prosthodontics clinic"/>
+			<xs:enumeration value="Psychology clinic"/>
+			<xs:enumeration value="part-time student"/>
+			<xs:enumeration value="Psychiatry clinic"/>
+			<xs:enumeration value="Psychatric Care Facility"/>
+			<xs:enumeration value="Patient"/>
+			<xs:enumeration value="Patient's Residence"/>
+			<xs:enumeration value="Quality Control"/>
+			<xs:enumeration value="Replicate"/>
+			<xs:enumeration value="Ambulatory Health Care Facilities; Clinic/Center; Radiology"/>
+			<xs:enumeration value="Racing"/>
+			<xs:enumeration value="Hospitals; Rehabilitation Hospital"/>
+			<xs:enumeration value="Rheumatology clinic"/>
+			<xs:enumeration value="Hospital Units; Rehabilitation Unit"/>
+			<xs:enumeration value="Roommate"/>
+			<xs:enumeration value="Residential treatment facility"/>
+			<xs:enumeration value="school"/>
+			<xs:enumeration value="self"/>
+			<xs:enumeration value="Show"/>
+			<xs:enumeration value="Sibling"/>
+			<xs:enumeration value="sibling in-law"/>
+			<xs:enumeration value="significant other"/>
+			<xs:enumeration value="Sister"/>
+			<xs:enumeration value="sister-in-law"/>
+			<xs:enumeration value="Sleep disorders unit"/>
+			<xs:enumeration value="Nursing &amp;amp; Custodial Care Facilities; Skilled Nursing Facility"/>
+			<xs:enumeration value="natural son"/>
+			<xs:enumeration value="adopted son"/>
+			<xs:enumeration value="foster son"/>
+			<xs:enumeration value="son-in-law"/>
+			<xs:enumeration value="Sports medicine clinic"/>
+			<xs:enumeration value="sponsored dependent"/>
+			<xs:enumeration value="spouse"/>
+			<xs:enumeration value="stepbrother"/>
+			<xs:enumeration value="step child"/>
+			<xs:enumeration value="stepdaughter"/>
+			<xs:enumeration value="stepfather"/>
+			<xs:enumeration value="stepmother"/>
+			<xs:enumeration value="stepparent"/>
+			<xs:enumeration value="step sibling"/>
+			<xs:enumeration value="stepsister"/>
+			<xs:enumeration value="stepson"/>
+			<xs:enumeration value="student"/>
+			<xs:enumeration value="Surgery clinic"/>
+			<xs:enumeration value="Residential Treatment Facilities; Substance Use Rehabilitation Facility"/>
+			<xs:enumeration value="Transplant clinic"/>
+			<xs:enumeration value="Travel and geographic medicine clinic"/>
+			<xs:enumeration value="Tribal Member"/>
+			<xs:enumeration value="uncle"/>
+			<xs:enumeration value="Urology clinic"/>
+			<xs:enumeration value="Verifying"/>
+			<xs:enumeration value="Veal"/>
+			<xs:enumeration value="wife"/>
+			<xs:enumeration value="Wool"/>
+			<xs:enumeration value="Wound clinic"/>
+			<xs:enumeration value="Working"/>
+			<xs:enumeration value="work site"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RoleCode_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>active</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.5.111"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CS_RoleCode">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="RoleCode_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CV_RoleCode">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="RoleCode_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="RoleCode_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CP-ISRecordType_code">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="cs">
+			<xs:enumeration value="VR"/>
+			<xs:enumeration value="IR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISRecordType_displayName">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="st">
+			<xs:enumeration value="Valid CP-IS Record"/>
+			<xs:enumeration value="Invalid CP-IS Record"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CP-ISRecordType_codeSystem">
+		<xs:annotation>
+			<xs:appinfo>
+				<status>created</status>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="uid">
+			<xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.17.471"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CV_CP-ISRecordType">
+		<xs:complexContent>
+			<xs:restriction base="CV">
+				<xs:sequence>
+					<xs:element name="originalText" type="ED" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="code" type="CP-ISRecordType_code" use="optional"/>
+				<xs:attribute name="codeSystem" type="CP-ISRecordType_codeSystem" use="optional"/>
+				<xs:attribute name="displayName" type="st" use="optional"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CS_CP-ISRecordType">
+		<xs:complexContent>
+			<xs:restriction base="CS">
+				<xs:attribute name="code" type="CP-ISRecordType_code" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

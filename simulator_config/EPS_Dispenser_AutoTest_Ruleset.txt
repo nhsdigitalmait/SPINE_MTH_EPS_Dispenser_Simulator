@@ -1,0 +1,572 @@
+# EPS_Dispenser_Autotest_Ruleset Simulator rule definition file for TKW Testbench
+# Richard Robinson, 19th September 2019
+# Richard Robinson, 12th August 2020
+# Richard Robinson, 21st August 2020 - updated 0527EC-C81007-000016 with 731BD6-C81007-000019 for CHAIN043
+# Richard Robinson, 10th Sept 2020 - included CHAIN034 and CHAIN035 dispense notifications and dispense claim information
+# 
+BEGIN RESPONSES
+#Prescription Release Responses
+CHAIN001_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN001_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN002_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN002_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN003_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN003_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN004_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN004_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN005_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN005_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN006_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN006_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN007_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN007_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN008_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN008_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN009_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN009_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN010_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN010_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN011_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN011_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN012_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN012_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN013_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN013_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN014_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN014_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN015_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN015_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN016_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN016_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN017_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN017_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN017a_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN017a_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN018_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN018_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+#CHAIN019_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN019_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+#CHAIN020_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN020_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+#CHAIN021_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN021_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN022_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN022_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN023_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN023_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN024_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN024_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN025_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN025_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN026_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN026_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN027_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN027_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN028_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN028_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN029_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN029_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN030_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN030_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+#CHAIN031_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN031_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+#CHAIN032_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN032_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN034_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN034_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN035_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN035_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN036_PORX_IN132004UK30_Response_1 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN036_PORX_IN070103UK31_Response_1.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31 $CHAIN036_Variable = "1"
+CHAIN036_PORX_IN132004UK30_Response_2 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN036_PORX_IN070103UK31_Response_2.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31 $CHAIN036_Variable =
+CHAIN037_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN037_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN038_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN038_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN039_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN039_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN040_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN040_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN042_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN042_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN043_PORX_IN132004UK30_Response_1 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN043_PORX_IN070103UK31_Response_1.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31 $CHAIN043_Variable = "1"
+CHAIN043_PORX_IN132004UK30_Response_2 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN043_PORX_IN070103UK31_Response_2.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31 $CHAIN043_Variable = "2"
+CHAIN043_PORX_IN132004UK30_Response_3 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN043_PORX_IN070103UK31_Response_3.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31 $CHAIN043_Variable = "3"
+CHAIN043_PORX_IN132004UK30_Response_4 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN053_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30 $CHAIN043_Variable =
+CHAIN044_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN044_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN045_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN045_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN047_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN047_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN048_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN048_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN049_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN049_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN050_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN050_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN051_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN051_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN052_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN052_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN053_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN053_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN054_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN054_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN054a_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN054a_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN054b_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN054b_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN054c_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN054c_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN054d_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN054d_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN055_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN055_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN056_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN056_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN057_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN057_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN058_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN058_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN059_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN059_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN060_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN060_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN061_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN061_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN062_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN062_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN063_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN063_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN064_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN064_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN065_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN065_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN066_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN051_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30
+CHAIN067_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN067_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+CHAIN068_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN068_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
+
+#Nominated Prescription Release Responses
+CHAIN033_PORX_IN060102UK30_Response_1 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN033_PORX_IN070101UK31_Response_1.xml 202 urn:nhs:names:services:mm/PORX_IN070101UK31 $CHAIN033_Variable = "1"
+CHAIN033_PORX_IN060102UK30_Response_2 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN033_PORX_IN070101UK31_Response_2.xml 202 urn:nhs:names:services:mm/PORX_IN070101UK31 $CHAIN033_Variable = "2"
+CHAIN033_PORX_IN060102UK30_Response_3 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN033_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30 $CHAIN033_Variable = 
+CHAIN046_PORX_IN060102UK30_Response_1 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN046_PORX_IN070101UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070101UK31 $CHAIN046_Variable = "1"
+CHAIN046_PORX_IN060102UK30_Response_2 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN046_PORX_IN110101UK30_Response.xml 202 urn:nhs:names:services:mm/PORX_IN110101UK30 $CHAIN046_Variable = 
+
+#Dispense Claim Information Response (negative MCCI)
+CHAIN001_PORX_IN090101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN001_MCCI_IN010000UK13_Response_0016.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN002_PORX_IN090101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN002_MCCI_IN010000UK13_Response_0011.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN038_PORX_IN090101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN038_MCCI_IN010000UK13_Response_0006.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+#Dispense Notification Response (negative MCCI)
+CHAIN017_PORX_IN080101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN017_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN028_Variable =
+CHAIN028_PORX_IN080101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN017_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN028_Variable = 
+CHAIN030_PORX_IN080101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN017_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN030_Variable = 
+
+#Dispense Proposal Return
+CHAIN009_PORX_IN100101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN009_MCCI_IN010000UK13_Response_0012.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+#Rebuild Dispense History Response (negative MCCI)
+CHAIN041_PORX_IN540101UK31_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN041_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+# Positive MCCI
+Positive_MCCI_IN010000UK13 TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+CHAIN055_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN055_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN056_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN056_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN057_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN057_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN058_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN058_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN059_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN059_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN060_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN060_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN066_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN066_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN067_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN067_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+CHAIN068_MCCI_IN010000UK13_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/CHAIN068_MCCI_IN010000UK13_Response.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+ebXMLack_response 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13
+
+CHAIN017_ebXMLack_response1 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN017_Variable = "1"
+CHAIN017_ebXMLack_response2 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN017_Variable = "2"
+
+CHAIN028_ebXMLack_response1 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN028_Variable = "1"
+CHAIN028_ebXMLack_response2 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN028_Variable = "2"
+
+CHAIN030_ebXMLack_response1 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN030_Variable = "1"
+CHAIN030_ebXMLack_response2 	TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/simulator_config/PrescriptionTemplates/MCCI_IN010000UK13_Response_AA.xml 202 urn:nhs:names:services:mm/MCCI_IN010000UK13 $CHAIN030_Variable = "2"
+
+no_response class:uk.nhs.digital.mait.tkwx.tk.internalservices.rules.routingactor.NoResponse
+
+
+do_process	NONE	0
+END RESPONSES
+
+BEGIN SUBSTITUTIONS
+#__MESSAGEID__	UUID
+__CREATION_TIMESTAMP__ HL7datetime
+__SIAB_ASID_SYSTEMPROPERTY__ Property mth.my.asid
+__ACKNOWLEDGED_MESSAGEID_XPATH__ Xpath /*[1]/hl7:id/@root
+__REQ_CLINICAL_DOC_MESSAGEID_XPATH__ Xpath /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:id/@root
+__ORIGINAL_SND_XPATH__ Xpath /*[1]/hl7:communicationFunctionSnd/hl7:device/hl7:id/@extension
+__MSGID_UUID__ UUID
+__MSGID_UUID2__ UUID
+__AUTHOR1_ASID__ Property mth.my.asid
+__NOMINATED_RELEASE_REQUEST_ID__ Xpath /*[1]/hl7:ControlActEvent/hl7:subject/hl7:NominatedPrescriptionReleaseRequest/hl7:id/@root
+
+SESSION_ID Xpath /*[1]/hl7:communicationFunctionSnd/hl7:device/hl7:id/@extension
+
+#__ASYNC_RCV_ASID__ Xpath //hl7:communicationFunctionSnd/hl7:device/hl7:id/@extension
+#__ORIGINAL_PRESCRIPTION_ID_XPATH__ Xpath /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:id/@root
+#__ERROR_VALUE_CODE_LITERAL__ Literal 5000
+#__ERROR_VALUE_CODESYSTEM_LITERAL__ Literal 2.16.840.1.113883.2.1.3.2.4.16.34
+#__ERROR_VALUE_DISPLAYTEXT_LITERAL__ Literal Unable to process message
+#__EVENT_UUID__ UUID
+#__SOAP_ERROR_FAULTCODE_REQUIRED__	Literal	soap:Client
+#__SOAP_ERROR_FAULTSTRING_REQUIRED__	Literal	The service/interaction is not supported for the requested URI
+#__SOAP_ERROR_CODECONTEXT__ Literal urn:nhs:names:errors:tms
+#__SOAP_ERROR_ERRORCODE__ Literal 101
+#__SOAP_ERROR_SEVERITY__ Literal Error
+#__SOAP_ERROR_LOCATION__ Literal HTTP Header - SOAPAction
+#__SOAP_ERROR_DESCRIPTION__ Literal The service/interaction is not supported for the requested URI
+END SUBSTITUTIONS
+
+BEGIN EXPRESSIONS
+#Prescription Release Requests
+CHAIN001_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 121717-C81007-00001U
+CHAIN002_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 89C126-C81007-000011
+CHAIN003_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1E1A-E8D4-E050-D20AE3A22B74.?
+CHAIN004_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-21E7-E8D4-E050-D20AE3A22B74.?
+CHAIN005_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 987FFC-C81007-000012
+CHAIN006_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 8C9A1F-B83002-00001A
+CHAIN007_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2001-E8D4-E050-D20AE3A22B74.?
+CHAIN008_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9751A48F-6E63-43C8-E050-D20AE3A24543.?
+CHAIN009_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1C6E-E8D4-E050-D20AE3A22B74.?
+CHAIN010_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1C94-E8D4-E050-D20AE3A22B74.?
+CHAIN011_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1B3E-E8D4-E050-D20AE3A22B74.?
+CHAIN012_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-236D-E8D4-E050-D20AE3A22B74.?
+CHAIN013_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1A6C-E8D4-E050-D20AE3A22B74.?
+CHAIN014_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1FD3-E8D4-E050-D20AE3A22B74.?
+CHAIN015_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1E54-E8D4-E050-D20AE3A22B74.?
+CHAIN016_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1BEB-E8D4-E050-D20AE3A22B74.?
+CHAIN017_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-23BD-E8D4-E050-D20AE3A22B74.?
+CHAIN017a_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1D3D-E8D4-E050-D20AE3A22B74.?
+CHAIN018_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 481D33-C81007-000011
+#CHAIN019_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension Chain19??
+#CHAIN020_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension Chain20??
+#CHAIN021_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension Chain21??
+CHAIN022_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 185A5F-B83002-00001J
+CHAIN023_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 483070-B83002-000015
+CHAIN024_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 1829BF-C81007-00001G
+CHAIN025_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 62FD4E-C81007-00001P
+CHAIN026_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 905C30-C81007-00001+
+CHAIN027_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 1DB78B-C81007-00001A
+CHAIN028_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 42526E-C81007-00001+
+CHAIN029_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 18446A-B83002-000014
+CHAIN030_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 5C2A21-C81007-000017
+#CHAIN031_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 
+#CHAIN032_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 
+CHAIN034_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 4F0C59-C81007-00001R
+CHAIN035_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 208F5A-C81007-000019
+CHAIN036_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 78EFE5-B83002-00001C
+CHAIN037_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 00C329-C81007-00001E
+CHAIN038_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 169D06-B83002-00001G
+CHAIN039_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 601E2F-B83002-00001I
+CHAIN040_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 25E5A3-C81007-00001B
+CHAIN042_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 144613-B83002-00001F
+CHAIN043_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 731BD6-C81007-000019
+CHAIN044_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 7B10A7-C81007-00001R
+CHAIN045_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 1D154E-B83002-00001Z
+CHAIN047_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 3228F7-C81007-00001R
+CHAIN048_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-23B1-E8D4-E050-D20AE3A22B74.?
+CHAIN049_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 196137-C81007-000012
+CHAIN050_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 1B2A3E-C81007-00001V
+CHAIN051_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 0846E1-B83002-000012
+CHAIN052_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 505851-C81007-00001O
+CHAIN053_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 1A66CA-C81007-000010
+CHAIN054_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2E4EDA-B83002-000018
+CHAIN054a_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2314-E8D4-E050-D20AE3A22B74.?
+CHAIN054b_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-227B-E8D4-E050-D20AE3A22B74.?
+CHAIN054c_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1A77-E8D4-E050-D20AE3A22B74.?
+CHAIN054d_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2251-E8D4-E050-D20AE3A22B74.?
+CHAIN055_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 830E43-C81007-00001Q
+CHAIN056_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 525FB0-C81007-00001S
+CHAIN057_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2821C6-C81007-00001D
+CHAIN058_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2BE20A-C81007-00001F
+CHAIN059_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 928E40-C81007-00001M
+CHAIN060_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 853237-B83002-000010
+CHAIN061_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 4430A0-C81007-00001L
+CHAIN062_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 9147DF-C81007-00001U
+CHAIN063_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 575F86-B83002-00001W
+CHAIN064_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 8E8A8E-C81007-00001Z
+CHAIN065_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2599C6-B83002-00001L
+CHAIN066_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2DA8DA-C81007-03A3DV
+CHAIN067_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 2A3368-B83002-00001+
+CHAIN068_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 63FD10-B83002-00001U
+
+#Nominated Prescription Release Requests
+CHAIN033_PORX_IN060102UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:NominatedPrescriptionReleaseRequest/hl7:author/hl7:AgentPerson/hl7:representedOrganization/hl7:id/@extension FA553
+CHAIN046_PORX_IN060102UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:NominatedPrescriptionReleaseRequest/hl7:author/hl7:AgentPerson/hl7:representedOrganization/hl7:id/@extension FPM83
+
+#Dispense Notifications
+CHAIN001_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 121717-C81007-00001U
+CHAIN002_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 89C126-C81007-000011
+CHAIN007_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2001-E8D4-E050-D20AE3A22B74.?
+CHAIN010_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1C94-E8D4-E050-D20AE3A22B74.?
+CHAIN011_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1B3E-E8D4-E050-D20AE3A22B74.?
+CHAIN012_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-236D-E8D4-E050-D20AE3A22B74.?
+CHAIN013_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1A6C-E8D4-E050-D20AE3A22B74.?
+CHAIN014_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1FD3-E8D4-E050-D20AE3A22B74.?
+CHAIN015_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1E54-E8D4-E050-D20AE3A22B74.?
+CHAIN016_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1BEB-E8D4-E050-D20AE3A22B74.?
+CHAIN017_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-23BD-E8D4-E050-D20AE3A22B74.?
+CHAIN018_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 481D33-C81007-000011
+#CHAIN019_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension Chain19??
+#CHAIN021_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension Chain21??
+CHAIN022_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 185A5F-B83002-00001J
+CHAIN024_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 1829BF-C81007-00001G
+CHAIN025_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 62FD4E-C81007-00001P
+CHAIN026_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 905C30-C81007-00001+
+CHAIN027_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 1DB78B-C81007-00001A
+CHAIN028_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 42526E-C81007-00001+
+CHAIN029_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 18446A-B83002-000014
+CHAIN030_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 5C2A21-C81007-000017
+CHAIN034_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 4F0C59-C81007-00001R
+CHAIN035_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 208F5A-C81007-000019
+CHAIN036_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 78EFE5-B83002-00001C
+CHAIN037_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 00C329-C81007-00001E
+CHAIN038_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 169D06-B83002-00001G
+CHAIN040_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 25E5A3-C81007-00001B
+CHAIN041_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 9135FE-C81007-00001Z
+CHAIN043_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 731BD6-C81007-000019
+CHAIN044_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 7B10A7-C81007-00001R
+CHAIN045_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 1D154E-B83002-00001Z
+CHAIN047_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 3228F7-C81007-00001R
+CHAIN048_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-23B1-E8D4-E050-D20AE3A22B74.?
+CHAIN054a_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2314-E8D4-E050-D20AE3A22B74.?
+CHAIN054b_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-227B-E8D4-E050-D20AE3A22B74.?
+CHAIN054c_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1A77-E8D4-E050-D20AE3A22B74.?
+CHAIN054d_PORX_IN080101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-2251-E8D4-E050-D20AE3A22B74.?
+CHAIN055_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 830E43-C81007-00001Q
+CHAIN057_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 2821C6-C81007-00001D
+CHAIN058_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 2BE20A-C81007-00001F
+CHAIN059_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 928E40-C81007-00001M
+CHAIN060_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 853237-B83002-000010
+CHAIN061_PORX_IN080101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseNotification/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 4430A0-C81007-00001L
+
+#Dispense Claims
+CHAIN001_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 121717-C81007-00001U
+CHAIN002_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 89C126-C81007-000011
+CHAIN024_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 1829BF-C81007-00001G
+CHAIN025_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 62FD4E-C81007-00001P
+CHAIN029_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 18446A-B83002-000014
+CHAIN034_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 4F0C59-C81007-00001R
+CHAIN035_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 208F5A-C81007-000019
+CHAIN037_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 00C329-C81007-00001E
+CHAIN038_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 169D06-B83002-00001G
+CHAIN043_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 731BD6-C81007-000019
+CHAIN044_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 7B10A7-C81007-00001R
+CHAIN045_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 1D154E-B83002-00001Z
+CHAIN057_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 2821C6-C81007-00001D
+CHAIN061_PORX_IN090101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseClaim/hl7:pertinentInformation1/hl7:pertinentSupplyHeader/hl7:pertinentInformation4/hl7:pertinentPrescriptionID/hl7:value/@extension 4430A0-C81007-00001L
+
+#Dispense Proposal Return
+CHAIN008_PORX_IN100101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@root ^9751A48F-6E63-43C8-E050-D20AE3A24543.?
+CHAIN009_PORX_IN100101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1C6E-E8D4-E050-D20AE3A22B74.?
+CHAIN017a_PORX_IN100101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1D3D-E8D4-E050-D20AE3A22B74.?
+#CHAIN020_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension Chain20??
+CHAIN023_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 483070-B83002-000015
+CHAIN039_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 601E2F-B83002-00001I
+CHAIN040_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 25E5A3-C81007-00001B
+CHAIN042_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 144613-B83002-00001F
+CHAIN056_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 525FB0-C81007-00001S
+CHAIN062_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 9147DF-C81007-00001U
+CHAIN063_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 575F86-B83002-00001W
+CHAIN064_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 8E8A8E-C81007-00001Z
+CHAIN065_PORX_IN100101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:DispenseProposalReturn/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 2599C6-B83002-00001L
+
+#ETP Withraw
+CHAIN013_PORX_IN510101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@root ^9361DA95-1A6C-E8D4-E050-D20AE3A22B74.?
+CHAIN014_PORX_IN510101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@root ^9361DA95-1FD3-E8D4-E050-D20AE3A22B74.?
+CHAIN015_PORX_IN510101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@root ^9361DA95-1E54-E8D4-E050-D20AE3A22B74.?
+CHAIN016_PORX_IN510101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@root ^9361DA95-1BEB-E8D4-E050-D20AE3A22B74.?
+CHAIN026_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 905C30-C81007-00001+
+CHAIN027_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 1DB78B-C81007-00001A
+CHAIN044_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 7B10A7-C81007-00001R
+CHAIN066_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 2DA8DA-C81007-03A3DV
+CHAIN067_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 2A3368-B83002-00001+
+CHAIN068_PORX_IN510101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:ETPWithdraw/hl7:pertinentInformation3/hl7:pertinentWithdrawID/hl7:value/@extension 63FD10-B83002-00001U
+
+
+#Rebuild Dispense History
+CHAIN017_PORX_IN540101UK31_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:RebuildDispenseHistory/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-23BD-E8D4-E050-D20AE3A22B74.?
+CHAIN028_PORX_IN540101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:RebuildDispenseHistory/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 42526E-C81007-00001+
+CHAIN030_PORX_IN540101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:RebuildDispenseHistory/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 5C2A21-C81007-000017
+CHAIN041_PORX_IN540101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:RebuildDispenseHistory/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 9135FE-C81007-00001Z
+CHAIN044_PORX_IN540101UK31_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:RebuildDispenseHistory/hl7:pertinentInformation1/hl7:pertinentPrescriptionID/hl7:value/@extension 7B10A7-C81007-00001R
+
+#Stateful Variable setting
+CHAIN017_Variable_1_previous_response $CHAIN017_Variable matches ^1$
+CHAIN017_Variable_2_previous_responses $CHAIN017_Variable matches ^2$
+
+CHAIN028_Variable_1_previous_response $CHAIN028_Variable matches ^1$
+CHAIN028_Variable_2_previous_responses $CHAIN028_Variable matches ^2$
+
+CHAIN030_Variable_1_previous_response $CHAIN030_Variable matches ^1$
+CHAIN030_Variable_2_previous_responses $CHAIN030_Variable matches ^2$
+
+CHAIN033_Variable_1_previous_response $CHAIN033_Variable matches ^1$
+CHAIN033_Variable_2_previous_responses $CHAIN033_Variable matches ^2$
+
+CHAIN036_Variable_1_previous_response $CHAIN036_Variable matches ^1$
+
+CHAIN043_Variable_1_previous_response $CHAIN043_Variable matches ^1$
+CHAIN043_Variable_2_previous_response $CHAIN043_Variable matches ^2$
+CHAIN043_Variable_3_previous_response $CHAIN043_Variable matches ^3$
+
+CHAIN046_Variable_1_previous_response $CHAIN046_Variable matches ^1$
+
+passthrough	Always
+END EXPRESSIONS
+
+
+
+#Dispense Claims
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN090101UK31
+if CHAIN001_PORX_IN090101UK31_Rule then CHAIN001_PORX_IN090101UK31_Response
+if CHAIN002_PORX_IN090101UK31_Rule then CHAIN002_PORX_IN090101UK31_Response
+if CHAIN024_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN025_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN029_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN034_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN035_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN037_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN038_PORX_IN090101UK31_Rule then CHAIN038_PORX_IN090101UK31_Response
+if CHAIN043_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN044_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN045_PORX_IN090101UK31_Rule then ebXMLack_response
+if CHAIN057_PORX_IN090101UK31_Rule then CHAIN057_MCCI_IN010000UK13_Response
+if CHAIN061_PORX_IN090101UK31_Rule then ebXMLack_response
+
+END RULE
+
+#Prescription Release Requests
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN132004UK30
+if CHAIN001_PORX_IN132004UK30_Rule then CHAIN001_PORX_IN132004UK30_Response
+if CHAIN002_PORX_IN132004UK30_Rule then CHAIN002_PORX_IN132004UK30_Response
+if CHAIN003_PORX_IN132004UK30_Rule then CHAIN003_PORX_IN132004UK30_Response
+if CHAIN004_PORX_IN132004UK30_Rule then CHAIN004_PORX_IN132004UK30_Response
+if CHAIN005_PORX_IN132004UK30_Rule then CHAIN005_PORX_IN132004UK30_Response
+if CHAIN006_PORX_IN132004UK30_Rule then CHAIN006_PORX_IN132004UK30_Response
+if CHAIN007_PORX_IN132004UK30_Rule then CHAIN007_PORX_IN132004UK30_Response
+if CHAIN008_PORX_IN132004UK30_Rule then CHAIN008_PORX_IN132004UK30_Response
+if CHAIN009_PORX_IN132004UK30_Rule then CHAIN009_PORX_IN132004UK30_Response
+if CHAIN010_PORX_IN132004UK30_Rule then CHAIN010_PORX_IN132004UK30_Response
+if CHAIN011_PORX_IN132004UK30_Rule then CHAIN011_PORX_IN132004UK30_Response
+if CHAIN012_PORX_IN132004UK30_Rule then CHAIN012_PORX_IN132004UK30_Response
+if CHAIN013_PORX_IN132004UK30_Rule then CHAIN013_PORX_IN132004UK30_Response
+if CHAIN014_PORX_IN132004UK30_Rule then CHAIN014_PORX_IN132004UK30_Response
+if CHAIN015_PORX_IN132004UK30_Rule then CHAIN015_PORX_IN132004UK30_Response
+if CHAIN016_PORX_IN132004UK30_Rule then CHAIN016_PORX_IN132004UK30_Response
+if CHAIN017_PORX_IN132004UK30_Rule then CHAIN017_PORX_IN132004UK30_Response
+if CHAIN017a_PORX_IN132004UK30_Rule then CHAIN017a_PORX_IN132004UK30_Response
+if CHAIN018_PORX_IN132004UK30_Rule then CHAIN018_PORX_IN132004UK30_Response
+#if CHAIN019_PORX_IN132004UK30_Rule then CHAIN019_PORX_IN132004UK30_Response
+#if CHAIN020_PORX_IN132004UK30_Rule then CHAIN020_PORX_IN132004UK30_Response
+#if CHAIN021_PORX_IN132004UK30_Rule then CHAIN021_PORX_IN132004UK30_Response
+if CHAIN022_PORX_IN132004UK30_Rule then CHAIN022_PORX_IN132004UK30_Response
+if CHAIN023_PORX_IN132004UK30_Rule then CHAIN023_PORX_IN132004UK30_Response
+if CHAIN024_PORX_IN132004UK30_Rule then CHAIN024_PORX_IN132004UK30_Response
+if CHAIN025_PORX_IN132004UK30_Rule then CHAIN025_PORX_IN132004UK30_Response
+if CHAIN026_PORX_IN132004UK30_Rule then CHAIN026_PORX_IN132004UK30_Response
+if CHAIN027_PORX_IN132004UK30_Rule then CHAIN027_PORX_IN132004UK30_Response
+if CHAIN028_PORX_IN132004UK30_Rule then CHAIN028_PORX_IN132004UK30_Response
+if CHAIN029_PORX_IN132004UK30_Rule then CHAIN029_PORX_IN132004UK30_Response
+if CHAIN030_PORX_IN132004UK30_Rule then CHAIN030_PORX_IN132004UK30_Response
+#if CHAIN031_PORX_IN132004UK30_Rule then CHAIN031_PORX_IN132004UK30_Response
+#if CHAIN032_PORX_IN132004UK30_Rule then CHAIN032_PORX_IN132004UK30_Response
+if CHAIN034_PORX_IN132004UK30_Rule then CHAIN034_PORX_IN132004UK30_Response
+if CHAIN035_PORX_IN132004UK30_Rule then CHAIN035_PORX_IN132004UK30_Response
+if CHAIN036_PORX_IN132004UK30_Rule AND CHAIN036_Variable_1_previous_response then CHAIN036_PORX_IN132004UK30_Response_2
+if CHAIN036_PORX_IN132004UK30_Rule then CHAIN036_PORX_IN132004UK30_Response_1
+if CHAIN037_PORX_IN132004UK30_Rule then CHAIN037_PORX_IN132004UK30_Response
+if CHAIN038_PORX_IN132004UK30_Rule then CHAIN038_PORX_IN132004UK30_Response
+if CHAIN039_PORX_IN132004UK30_Rule then CHAIN039_PORX_IN132004UK30_Response
+if CHAIN040_PORX_IN132004UK30_Rule then CHAIN040_PORX_IN132004UK30_Response
+if CHAIN042_PORX_IN132004UK30_Rule then CHAIN042_PORX_IN132004UK30_Response
+if CHAIN043_PORX_IN132004UK30_Rule AND CHAIN043_Variable_3_previous_response then CHAIN043_PORX_IN132004UK30_Response_4
+if CHAIN043_PORX_IN132004UK30_Rule AND CHAIN043_Variable_2_previous_response then CHAIN043_PORX_IN132004UK30_Response_3
+if CHAIN043_PORX_IN132004UK30_Rule AND CHAIN043_Variable_1_previous_response then CHAIN043_PORX_IN132004UK30_Response_2
+if CHAIN043_PORX_IN132004UK30_Rule then CHAIN043_PORX_IN132004UK30_Response_1
+if CHAIN044_PORX_IN132004UK30_Rule then CHAIN044_PORX_IN132004UK30_Response
+if CHAIN045_PORX_IN132004UK30_Rule then CHAIN045_PORX_IN132004UK30_Response
+if CHAIN047_PORX_IN132004UK30_Rule then CHAIN047_PORX_IN132004UK30_Response
+if CHAIN048_PORX_IN132004UK30_Rule then CHAIN048_PORX_IN132004UK30_Response
+if CHAIN049_PORX_IN132004UK30_Rule then CHAIN049_PORX_IN132004UK30_Response
+if CHAIN050_PORX_IN132004UK30_Rule then CHAIN050_PORX_IN132004UK30_Response
+if CHAIN051_PORX_IN132004UK30_Rule then CHAIN051_PORX_IN132004UK30_Response
+if CHAIN052_PORX_IN132004UK30_Rule then CHAIN052_PORX_IN132004UK30_Response
+if CHAIN053_PORX_IN132004UK30_Rule then CHAIN053_PORX_IN132004UK30_Response
+if CHAIN054_PORX_IN132004UK30_Rule then CHAIN054_PORX_IN132004UK30_Response
+if CHAIN054a_PORX_IN132004UK30_Rule then CHAIN054a_PORX_IN132004UK30_Response
+if CHAIN054b_PORX_IN132004UK30_Rule then CHAIN054b_PORX_IN132004UK30_Response
+if CHAIN054c_PORX_IN132004UK30_Rule then CHAIN054c_PORX_IN132004UK30_Response
+if CHAIN054d_PORX_IN132004UK30_Rule then CHAIN054d_PORX_IN132004UK30_Response
+if CHAIN055_PORX_IN132004UK30_Rule then CHAIN055_PORX_IN132004UK30_Response
+if CHAIN056_PORX_IN132004UK30_Rule then CHAIN056_PORX_IN132004UK30_Response
+if CHAIN057_PORX_IN132004UK30_Rule then CHAIN057_PORX_IN132004UK30_Response
+if CHAIN058_PORX_IN132004UK30_Rule then CHAIN058_PORX_IN132004UK30_Response
+if CHAIN059_PORX_IN132004UK30_Rule then CHAIN059_PORX_IN132004UK30_Response
+if CHAIN060_PORX_IN132004UK30_Rule then CHAIN060_PORX_IN132004UK30_Response
+if CHAIN061_PORX_IN132004UK30_Rule then CHAIN061_PORX_IN132004UK30_Response
+if CHAIN062_PORX_IN132004UK30_Rule then CHAIN062_PORX_IN132004UK30_Response
+if CHAIN063_PORX_IN132004UK30_Rule then CHAIN063_PORX_IN132004UK30_Response
+if CHAIN064_PORX_IN132004UK30_Rule then CHAIN064_PORX_IN132004UK30_Response
+if CHAIN065_PORX_IN132004UK30_Rule then CHAIN065_PORX_IN132004UK30_Response
+if CHAIN066_PORX_IN132004UK30_Rule then CHAIN066_PORX_IN132004UK30_Response
+if CHAIN067_PORX_IN132004UK30_Rule then CHAIN067_PORX_IN132004UK30_Response
+if CHAIN068_PORX_IN132004UK30_Rule then CHAIN068_PORX_IN132004UK30_Response
+END RULE
+
+#Nominated Prescription Release Requests
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN060102UK30
+if CHAIN033_PORX_IN060102UK30_Rule AND CHAIN033_Variable_2_previous_responses then CHAIN033_PORX_IN060102UK30_Response_3
+if CHAIN033_PORX_IN060102UK30_Rule AND CHAIN033_Variable_1_previous_response then CHAIN033_PORX_IN060102UK30_Response_2
+if CHAIN033_PORX_IN060102UK30_Rule then CHAIN033_PORX_IN060102UK30_Response_1
+if CHAIN046_PORX_IN060102UK30_Rule AND CHAIN046_Variable_1_previous_response then CHAIN046_PORX_IN060102UK30_Response_2
+if CHAIN046_PORX_IN060102UK30_Rule then CHAIN046_PORX_IN060102UK30_Response_1
+END RULE
+
+
+#Dispense Proposal Return
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN100101UK31
+if CHAIN008_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN009_PORX_IN100101UK31_Rule then CHAIN009_PORX_IN100101UK31_Response
+if CHAIN017a_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+#if CHAIN020_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN023_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN039_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN040_PORX_IN100101UK31_Rule then CHAIN009_PORX_IN100101UK31_Response
+if CHAIN042_PORX_IN100101UK31_Rule then no_response
+if CHAIN056_PORX_IN100101UK31_Rule then CHAIN056_MCCI_IN010000UK13_Response
+if CHAIN062_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN063_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN064_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN065_PORX_IN100101UK31_Rule then Positive_MCCI_IN010000UK13
+END RULE
+
+#Dispense Notifications
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN080101UK31
+if CHAIN001_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN002_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN007_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN010_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN011_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN012_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN013_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN014_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN015_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN016_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN017_PORX_IN080101UK31_Rule AND CHAIN017_Variable_2_previous_responses then CHAIN017_PORX_IN080101UK31_Response
+if CHAIN017_PORX_IN080101UK31_Rule AND CHAIN017_Variable_1_previous_response then CHAIN017_ebXMLack_response2
+if CHAIN017_PORX_IN080101UK31_Rule then CHAIN017_ebXMLack_response1
+if CHAIN018_PORX_IN080101UK31_Rule then ebXMLack_response
+#if CHAIN019_PORX_IN080101UK31_Rule then ebXMLack_response
+#if CHAIN021_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN022_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN024_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN025_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN026_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN027_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN028_PORX_IN080101UK31_Rule AND CHAIN028_Variable_2_previous_responses then CHAIN028_PORX_IN080101UK31_Response
+if CHAIN028_PORX_IN080101UK31_Rule AND CHAIN028_Variable_1_previous_response then CHAIN028_ebXMLack_response2
+if CHAIN028_PORX_IN080101UK31_Rule then CHAIN028_ebXMLack_response1
+if CHAIN029_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN030_PORX_IN080101UK31_Rule AND CHAIN030_Variable_2_previous_responses then CHAIN030_PORX_IN080101UK31_Response
+if CHAIN030_PORX_IN080101UK31_Rule AND CHAIN030_Variable_1_previous_response then CHAIN030_ebXMLack_response2
+if CHAIN030_PORX_IN080101UK31_Rule then CHAIN030_ebXMLack_response1
+if CHAIN034_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN035_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN036_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN037_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN038_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN040_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN041_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN043_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN044_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN045_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN047_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN048_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN054a_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN054b_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN054c_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN054d_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN055_PORX_IN080101UK31_Rule then CHAIN055_MCCI_IN010000UK13_Response
+if CHAIN057_PORX_IN080101UK31_Rule then ebXMLack_response
+if CHAIN058_PORX_IN080101UK31_Rule then CHAIN058_MCCI_IN010000UK13_Response
+if CHAIN059_PORX_IN080101UK31_Rule then CHAIN059_MCCI_IN010000UK13_Response
+if CHAIN060_PORX_IN080101UK31_Rule then CHAIN060_MCCI_IN010000UK13_Response
+if CHAIN061_PORX_IN080101UK31_Rule then ebXMLack_response
+END RULE
+
+#Dispense Withdraw
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN510101UK31
+if CHAIN013_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN014_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN015_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN016_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN026_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN027_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN044_PORX_IN510101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN066_PORX_IN510101UK31_Rule then CHAIN066_MCCI_IN010000UK13_Response
+if CHAIN067_PORX_IN510101UK31_Rule then CHAIN067_MCCI_IN010000UK13_Response
+if CHAIN068_PORX_IN510101UK31_Rule then CHAIN068_MCCI_IN010000UK13_Response
+END RULE
+
+#Rebuild Dispense History
+BEGIN RULE
+urn:nhs:names:services:mm/PORX_IN540101UK31
+if CHAIN017_PORX_IN540101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN028_PORX_IN540101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN030_PORX_IN540101UK31_Rule then Positive_MCCI_IN010000UK13
+if CHAIN041_PORX_IN540101UK31_Rule then CHAIN041_PORX_IN540101UK31_Response
+if CHAIN044_PORX_IN540101UK31_Rule then Positive_MCCI_IN010000UK13
+END RULE
