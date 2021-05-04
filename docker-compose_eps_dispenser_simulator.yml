@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+    tkw_eps_dispenser_simulator:
+        network_mode : "host"
+        volumes:
+            - '${HOME}/Scratch/eps_data:/home/service/data'
+            - '${HOME}/Scratch/eps_data/EPSMessageTemplates:/home/service/EPSMessageTemplates'
+            - '${HOME}/TKW-5.0.5/TKW/config/SPINE_MTH_EPS_Dispenser_Simulator/certs:/home/service/certs'
+        environment:
+            - trustStore=/home/service/certs/opentest.jks
+            - trustStorePassword=password
+            - keyStore=/home/service/certs/vpn-client-1094.jks
+            - keyStorePassword=password
+        image: 'nhsdigitalmait/tkw_eps_dispenser_simulator:0.1'
