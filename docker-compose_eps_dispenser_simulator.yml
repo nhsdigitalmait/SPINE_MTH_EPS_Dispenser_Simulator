@@ -4,7 +4,7 @@ services:
         network_mode : "host"
         volumes:
             - '${HOME}/Scratch/eps_data:/home/service/data'
-            - '${HOME}/Scratch/eps_data/external_configuration/EPSMessageTemplates:/home/service/data/external_configuration/EPSMessageTemplates'
+            - '${HOME}/TKW-5.0.5/TKW/config/SPINE_MTH_EPS_Dispenser_Simulator/external_configuration:/home/service/external_configuration'
             - '${HOME}/TKW-5.0.5/TKW/config/SPINE_MTH_EPS_Dispenser_Simulator/certs:/home/service/certs'
         environment:
             - trustStore=/home/service/certs/opentest.jks
