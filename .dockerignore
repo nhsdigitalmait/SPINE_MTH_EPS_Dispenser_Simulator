@@ -5,6 +5,7 @@
 !/simulator_config/**
 !/validator_config/**
 !/tkw-x_mth_server_ssl.properties
+!/tkw-x_mth_server_httpinterceptor.properties
 !/set-all-configurations.sh
 !/runtkwfhirvalidator.sh
 !/tkwoutputstructure.tar

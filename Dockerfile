@@ -1,4 +1,4 @@
-FROM nhsdigitalmait/tkw-x:d737cf8
+FROM nhsdigitalmait/tkw-x:350ecba
 ARG USER_ID
 
 RUN useradd -rm -u $USER_ID service
@@ -17,5 +17,5 @@ ENV trustStorePassword=default
 ENV keyStore=default
 ENV keyStorePassword=default
 USER service
-ENTRYPOINT ["bash", "runtkwfhirvalidator.sh"]
+ENTRYPOINT ["bash", "runtkwentrypoint.sh"]
 

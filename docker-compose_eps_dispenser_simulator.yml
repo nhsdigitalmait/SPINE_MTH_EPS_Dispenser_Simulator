@@ -11,4 +11,6 @@ services:
             - trustStorePassword=password
             - keyStore=/home/service/certs/vpn-client-1094.jks
             - keyStorePassword=password
-        image: 'nhsdigitalmait/tkw_eps_dispenser_simulator:0.1'
+            - forwardingAddress=127.0.0.1
+            - forwardingPort=4433
+        image: 'nhsdigitalmait/tkw_eps_dispenser_simulator:0.2'
