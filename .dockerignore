@@ -7,6 +7,6 @@
 !/tkw-x_mth_server_ssl.properties
 !/tkw-x_mth_server_httpinterceptor.properties
 !/set-all-configurations.sh
-!/runtkwfhirvalidator.sh
+!/runtkwentrypoint.sh
 !/tkwoutputstructure.tar
 !/version_string.txt

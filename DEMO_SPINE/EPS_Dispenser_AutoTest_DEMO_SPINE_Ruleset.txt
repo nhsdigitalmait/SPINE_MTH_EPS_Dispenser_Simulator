@@ -6,6 +6,7 @@
 # 
 BEGIN RESPONSES
 #Prescription Release Responses
+CHAIN000_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/DEMO_SPINE/CHAIN001_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
 CHAIN001_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/external_configuration/EPSMessageTemplates/CHAIN001_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
 CHAIN002_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/external_configuration/EPSMessageTemplates/CHAIN002_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
 CHAIN003_PORX_IN132004UK30_Response TKW_ROOT/config/SPINE_MTH_EPS_Dispenser_Simulator/external_configuration/EPSMessageTemplates/CHAIN003_PORX_IN070103UK31_Response.xml 202 urn:nhs:names:services:mm/PORX_IN070103UK31
@@ -165,6 +166,7 @@ END SUBSTITUTIONS
 
 BEGIN EXPRESSIONS
 #Prescription Release Requests
+CHAIN000_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 999999-999999-999999
 CHAIN001_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 121717-C81007-00001U
 CHAIN002_PORX_IN132004UK30_Rule XpathEquals /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@extension 89C126-C81007-000011
 CHAIN003_PORX_IN132004UK30_Rule XpathMatches /*[1]/hl7:ControlActEvent/hl7:subject/hl7:PatientPrescriptionReleaseRequest/hl7:pertinentInformation/hl7:pertinentPrescriptionID/hl7:value/@root ^9361DA95-1E1A-E8D4-E050-D20AE3A22B74.?
@@ -386,6 +388,7 @@ END RULE
 #Prescription Release Requests
 BEGIN RULE
 urn:nhs:names:services:mm/PORX_IN132004UK30
+if CHAIN000_PORX_IN132004UK30_Rule then CHAIN000_PORX_IN132004UK30_Response
 if CHAIN001_PORX_IN132004UK30_Rule then CHAIN001_PORX_IN132004UK30_Response
 if CHAIN002_PORX_IN132004UK30_Rule then CHAIN002_PORX_IN132004UK30_Response
 if CHAIN003_PORX_IN132004UK30_Rule then CHAIN003_PORX_IN132004UK30_Response
